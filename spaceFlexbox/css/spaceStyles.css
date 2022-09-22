@@ -1,0 +1,64 @@
+* {
+    box-sizing: border-box;
+}
+
+div,
+footer,
+header,
+main {
+    border: solid gray thin;
+    padding: .5em;
+    font-size: 1.0em;
+}
+
+section {
+    border: solid red thin;
+    padding: 0.5em;
+    font-size: 1.0em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    text-align: center;
+}
+
+h4 {
+    font-size: 1.3em;
+}
+
+.responsiveImage {
+    max-width: 100%;
+    height: auto;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+@media screen and (min-width: 500px) {
+    main {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    section {
+        flex-basis: 50%;
+    }
+}
+
+@media screen and (min-width: 700px) {
+    section {
+        flex-basis: 33.33333%;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    section {
+        flex-basis: 16.66666%;
+    }
+}
