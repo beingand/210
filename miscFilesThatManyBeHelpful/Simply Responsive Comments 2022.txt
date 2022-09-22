@@ -1,0 +1,53 @@
+Excellent work, 
+
+All the responsive events work perfectly. A couple comments:
+
+1. Always set border-box as follows:
+
+* {
+box-sizing: border-box;
+}
+
+Then, if you set your width to 50%, it allows two containers to sit side by side. Border-box sizing means widths are measured border to border, and makes calculating width allocations much simpler than the default, which applies designated widths to only the content, meaning padding and border surrounding content add extra width.
+
+2. You apply the animal class four times, to each section. Apply it once, to the parent tag - main - and use descendant selectors:
+
+.animals section {
+styling goes here
+}
+
+Coding much simpler, and saves time if you have lots of sections.
+
+3.  You only need one media query for each width. Unless you group changes by style (for example, all background color changes are grouped together) there is no need to write duplicate media queries. 
+
+4.  No need for a max-width: 499px media query. "Mobile first" means all styling for mobile device goes at the top of the style sheet. Then use min-width media queries to code anything that changes.  Anything style not changed continues.
+
+Please study the posted solution and explanation.
+
+Judy
+
+Jessica:
+
+Very nice work on your Responsive Images assignment! The images are trying to behave responsively, and almost succeed.
+
+You correctly set the box-sizing to border-box, as follows:
+
+* {
+box-sizing: border-box;
+}
+
+Here is your css:
+
+section {
+  width: 100%;
+  float: left;
+  border: inset #333 thin;
+  padding: .3em;
+  margin: 0.5em;
+}
+
+The CSS for the section tag includes margin, which is throwing the width dimensions off a bit.
+
+Here is why: The default box-model applies designated widths to only the content, meaning padding, border, and margin  surrounding content add extra width. Border-box sizing means widths are measured border to border, and makes calculating width allocations much simpler than the default.
+
+However, even with border-box, the margin is not included in the calculation of designated widths. So if you set section widths to 50%, two sections fit side by side, UNLESS you have margin on the right or the left.

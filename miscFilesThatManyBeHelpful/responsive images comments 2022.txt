@@ -1,0 +1,93 @@
+Maricruz:
+
+Nice work on your Responsive Images assignment!
+
+The images behave appropriately at mobile size, 400px, 600px, and 1000px width; one across, two across, three across, then six across.
+
+A few comments:
+
+1.  To make the images appear a uniform size, they should be cropped to a similar aspect ratio.  But that is a matter of personal preference of designers.
+
+2.  The shitzu.jpeg image does not appear because the <img> source code is incorrect.  You have:  <img src="/images/shitzu.jpeg" alt="shitzu">  Correct code: <img src="images/shitzu.jpeg" alt="shitzu">. Relative paths should not begin with a forward slash.
+
+3.  Your CSS code does not need the dogs class applied six times, to each section tag.  Instead, apply the .dogs class once, to a tag which surrounds the section tags (such as body or main), and use descendant selectors to style all the section tags at one time:
+
+.dogs section {
+   styling goes here;
+   more styling if needed;
+}
+
+Please see the post in Canvas showing the solution to the simply responsive assignment, along with the video explanation of the solution, to see how descendant selectors are used for styling.
+
+4.  The box-model, by default, applies width the the content; padding, borders, and margin further extend the actual width.  For this reason, always start your CSS code with:
+
+* {
+  box-model: border-box;
+}
+
+This makes width calculations much simpler and more precise: width: 50% for two across,  25% for four across, etc. 
+
+Please see the post in Canvas showing the solution to the simply responsive assignment, along with the video explanation of the solution, for further explanation.
+
+5. You have a max-width media query which should be deleted.  It is not needed.  You already have code which applies this styling to each section.  Here is the CSS code that should be removed:
+
+@media (max-width:400px) {
+  .dogs {
+    float: left;
+    width: 100%;
+  }
+}
+
+CSS styling should all be "mobile first."  Begin styling with how the page should look at mobile size.  Then use a series of min-width media queries to specify what changes need be made to the CSS as the browser viewport width increases.  Please see the post in Canvas showing the solution to the simply responsive assignment, along with the video explanation of the solution, to see how this is done.
+
+---------------------------------------
+Sean:
+
+You've got the right idea when you specify widths for your sections, but this assignment is simplest done with a straight float solution. You tried to also use flexbox and got tangled up.
+
+A few commments:
+
+1.
+Your section tags each have the .column class applied. It is preferable to name classes so they describe the content to which the class is applied (for example: dogs class) rather than the styling. That way you may decide to change the styling but the class name still makes sense.
+
+Your CSS code does not need the dogs (or .column) class applied six times, to each section tag.  Instead, apply the .dogs class once, to a tag which surrounds the section tags (such as body or main), and use descendant selectors to style all the section tags at one time:
+
+.dogs section {
+   styling goes here;
+   more styling if needed;
+}
+
+Please see the post in Canvas showing the solution to the simply responsive assignment, along with the video explanation of the solution, to see how descendant selectors are used for styling.
+
+2.  The box-model, by default, applies width the the content; padding, borders, and margin further extend the actual width.  For this reason, always start your CSS code with:
+
+* {
+  box-model: border-box;
+}
+
+This makes width calculations much simpler and more precise: width: 50% for two across,  25% for four across, etc. 
+
+Please see the post in Canvas showing the solution to the simply responsive assignment, along with the video explanation of the solution, for further explanation.
+
+3. Your media queries specify both min-width and max-width. Just use min-width. The following min-width media query code overrides the previous code. 
+___________________
+
+Santiago,
+
+Very nice work on your responsive images assignment.  You certainly keep your code nice and lean; nothing extra that is not needed. Generally, that's a good idea.  
+
+But in this case your images assignment does not include one of the assignment requirements: a caption for each image. To accomplish this each image and caption must be enclosed in a block level element, such as a figure tag or a section tag. 
+
+Otherwise you've got the images lining up appropriately.  You're guessing at the widths, however.  To display the images six across you specify a width of 10% for each.  That takes up 60% of the viewport; there is a big white gap to the right. To avoid this gap, after you wrap your image and caption in a section tag, use border-box for the box-model.
+
+The box-model, by default, applies width the the content; padding, borders, and margin further extend the actual width.  For this reason, always start your CSS code with:
+
+* {
+  box-model: border-box;
+}
+
+This makes width calculations much simpler and more precise: width: 50% for two across,  25% for four across, etc. 
+______________________
+
+
+

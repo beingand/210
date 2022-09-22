@@ -1,0 +1,19 @@
+
+Syllabus> Course Objectives>
+
+ DELETE this sentence:  "We will learn basic concepts behind Content Management Systems, and will use the WordPress CMS to build a website"
+
+ADD this sentence:  "We will learn how to use the CSS Grid Layout Module to design layouts for websites."
+
+Syllabus > Grading:
+
+ Change WordPress Project to CSS Grid Layout Project
+
+Syllabus > Overview of Assignments > Projects:
+
+First, change "WordPress Project" to "CSS Grid Layout Project"
+Second, change sentence about WordPress Project to this:  "The CSS Grid Layout Project will give you hands on experience using CSS Grid to lay out websites."
+
+Project:[assignment in project group]
+Rename the WordPress Project to:  CSS Grid Project
+Leave the project instructions blank for now; I will add them later.

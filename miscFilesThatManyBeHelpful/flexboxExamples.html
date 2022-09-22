@@ -1,0 +1,368 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Flexbox Examples</title>
+<style>
+/* CLASSES */
+
+
+.parent {
+	background-color: #ddd;
+	height: 350px;
+}
+.row {
+	display: flex;
+	flex-direction: row;
+}
+.column {
+	display: flex;
+	flex-direction: column;
+}
+.child {
+	min-width: 30px;
+	margin: 5px;
+	min-height: 30px;
+	background-color: dodgerblue;
+	text-align: center;
+	border: 1px solid navy;
+}
+.flex-direction, .justify-content {
+	display: flex;
+}
+/* Justify Content*/
+.flex-start {
+	justify-content: flex-start;
+}
+.justify-center {
+	justify-content: center;
+}
+.flex-end {
+	justify-content: flex-end;
+}
+.space-around {
+	justify-content: space-around;
+}
+.space-between {
+	justify-content: space-between
+}
+/* Align Items*/
+
+
+.align-start {
+	align-items: flex-start;
+}
+.align-end {
+	align-items: flex-end;
+}
+.align-center {
+	align-items: center;
+}
+.align-stretch {
+	align-items: stretch
+}
+.align-baseline {
+	align-items: baseline;
+}
+/* Align self*/
+.self-start {
+	align-self: flex-start;
+	background-color: blueviolet
+}
+.self-center {
+	align-self: center;
+	background-color: blueviolet
+}
+.self-end {
+	align-self: flex-end;
+	background-color: blueviolet
+}
+.self-stretch {
+	align-self: stretch;
+	background-color: blueviolet
+}
+.self-baseline {
+	align-self: baseline;
+	background-color: blueviolet
+}
+</style>
+</head>
+
+<body>
+<main>
+  <h2>Flexbox Examples</h2>
+  <h4>With thanks to Michael MacNevin from ITD 210</h4>
+  <h3>Flex Direction: column</h3>
+  <div class="parent align-baseline column">
+    <div class="child ">1</div>
+    <div class="child ">2</div>
+    <div class="child ">3</div>
+    <div class="child ">4</div>
+    <div class="child ">5</div>
+  </div>
+  <h3>Flex Direction: column- Justify-Content: flex-start </h3>
+  <div class="parent justify-content align-baseline column flex-start">
+    <div class="child ">1</div>
+    <div class="child ">2</div>
+    <div class="child ">3</div>
+    <div class="child ">4</div>
+    <div class="child ">5</div>
+  </div>
+  <h3>Flex Direction: column- Justify-Content: center </h3>
+  <div class="parent column align-baseline justify-center">
+    <div class="child ">1</div>
+    <div class="child ">2</div>
+    <div class="child ">3</div>
+    <div class="child ">4</div>
+    <div class="child ">5</div>
+  </div>
+  <h3>Flex Direction: column- Justify-Content: flex-end </h3>
+  <div class="parent column align-baseline flex-end">
+    <div class="child ">1</div>
+    <div class="child ">2</div>
+    <div class="child ">3</div>
+    <div class="child ">4</div>
+    <div class="child ">5</div>
+  </div>
+  <h3>Flex Direction: column- Justify-Content: space-around </h3>
+  <div class="parent column align-baseline space-around">
+    <div class="child ">1</div>
+    <div class="child ">2</div>
+    <div class="child ">3</div>
+    <div class="child ">4</div>
+    <div class="child ">5</div>
+  </div>
+  <h3>Flex Direction: column- Justify-Content: space-between </h3>
+  <div class="parent column align-baseline space-between">
+    <div class="child ">1</div>
+    <div class="child ">2</div>
+    <div class="child ">3</div>
+    <div class="child ">4</div>
+    <div class="child ">5</div>
+  </div>
+  
+  <!-- Column Align Items-->
+  <h3>Flex Direction: column - Align-Items: flex-start </h3>
+  <div class="parent column justify-center align-baseline align-start">
+    <div class="child ">1</div>
+    <div class="child ">2</div>
+    <div class="child ">3</div>
+    <div class="child ">4</div>
+    <div class="child ">5</div>
+  </div>
+  <h3>Flex Direction: column - Align-Items: center </h3>
+  <div class="parent column justify-center align-center">
+    <div class="child ">1</div>
+    <div class="child ">2</div>
+    <div class="child ">3</div>
+    <div class="child ">4</div>
+    <div class="child ">5</div>
+  </div>
+  <h3>Flex Direction: column - Align-Items: end </h3>
+  <div class="parent column justify-center align-end">
+    <div class="child ">1</div>
+    <div class="child ">2</div>
+    <div class="child ">3</div>
+    <div class="child ">4</div>
+    <div class="child ">5</div>
+  </div>
+  <h3>Flex Direction: column - Align-Items: stretch</h3>
+  <div class="parent column justify-center align-stretch">
+    <div class="child ">1</div>
+    <div class="child ">2</div>
+    <div class="child ">3</div>
+    <div class="child ">4</div>
+    <div class="child ">5</div>
+  </div>
+  <h3>Flex Direction: column - Align-Items: baseline</h3>
+  <div class="parent column justify-center align-baseline">
+    <div class="child ">1</div>
+    <div class="child ">2</div>
+    <div class="child ">3</div>
+    <div class="child ">4</div>
+    <div class="child ">5</div>
+  </div>
+  
+  <!-- Column Align Self-->
+  <h3>Flex Direction: column - Align-Self: flex-start </h3>
+  <div class="parent column justify-center  align-center">
+    <div class="child ">1</div>
+    <div class="child ">2</div>
+    <div class="child self-start">3</div>
+    <div class="child ">4</div>
+    <div class="child ">5</div>
+  </div>
+  <h3>Flex Direction: column - Align-Self: center </h3>
+  <div class="parent column justify-center align-baseline align-center">
+    <div class="child ">1</div>
+    <div class="child ">2</div>
+    <div class="child self-center">3</div>
+    <div class="child ">4</div>
+    <div class="child ">5</div>
+  </div>
+  <h3>Flex Direction: column - Align-Self: flex-end </h3>
+  <div class="parent column align-baseline justify-center align-center">
+    <div class="child ">1</div>
+    <div class="child ">2</div>
+    <div class="child self-end">3</div>
+    <div class="child ">4</div>
+    <div class="child ">5</div>
+  </div>
+  <h3>Flex Direction: column - Align-Self: stretch</h3>
+  <div class="parent column justify-center align-center">
+    <div class="child ">1</div>
+    <div class="child ">2</div>
+    <div class="child self-stretch">3</div>
+    <div class="child ">4</div>
+    <div class="child ">5</div>
+  </div>
+  <h3>Flex Direction: column - Align-Self: baseline</h3>
+  <div class="parent column justify-center align-stretch align-center">
+    <div class="child ">1</div>
+    <div class="child ">2</div>
+    <div class="child self-baseline">3</div>
+    <div class="child ">4</div>
+    <div class="child ">5</div>
+  </div>
+  
+  <!-- START ROW -->
+  <h3>Flex-Direction: Row</h3>
+  <div class="parent align-baseline row">
+    <div class="child ">1</div>
+    <div class="child ">2</div>
+    <div class="child ">3</div>
+    <div class="child ">4</div>
+    <div class="child ">5</div>
+  </div>
+  
+  <!-- Row - justify content -->
+  <h3>Flex-Direction: row - Justify Content: flex-start</h3>
+  <div class="parent row align-baseline flex-start">
+    <div class="child ">1</div>
+    <div class="child ">2</div>
+    <div class="child ">3</div>
+    <div class="child ">4</div>
+    <div class="child ">5</div>
+  </div>
+  <h3>Flex-Direction: row - Justify Content: center</h3>
+  <div class="parent row align-baseline justify-center">
+    <div class="child ">1</div>
+    <div class="child ">2</div>
+    <div class="child ">3</div>
+    <div class="child ">4</div>
+    <div class="child ">5</div>
+  </div>
+  <h3>Flex-Direction: row - Justify Content: flex-end</h3>
+  <div class="parent row align-baseline flex-end">
+    <div class="child ">1</div>
+    <div class="child ">2</div>
+    <div class="child ">3</div>
+    <div class="child ">4</div>
+    <div class="child ">5</div>
+  </div>
+  <h3>Flex-Direction: row - Justify Content: space-around</h3>
+  <div class="parent row align-baseline space-around">
+    <div class="child ">1</div>
+    <div class="child ">2</div>
+    <div class="child ">3</div>
+    <div class="child ">4</div>
+    <div class="child ">5</div>
+  </div>
+  <h3>Flex-Direction: row - Justify Content: space-between</h3>
+  <div class="parent row align-baseline space-between">
+    <div class="child ">1</div>
+    <div class="child ">2</div>
+    <div class="child ">3</div>
+    <div class="child ">4</div>
+    <div class="child ">5</div>
+  </div>
+  
+  <!-- Row - Align Items -->
+  
+  <h3>Flex-Direction: row - Align-Items: align-start</h3>
+  <div class="parent row  justify-center align-start">
+    <div class="child ">1</div>
+    <div class="child ">2</div>
+    <div class="child ">3</div>
+    <div class="child ">4</div>
+    <div class="child ">5</div>
+  </div>
+  <h3>Flex-Direction: row - Align-Items: align-center</h3>
+  <div class="parent row justify-center align-center">
+    <div class="child ">1</div>
+    <div class="child ">2</div>
+    <div class="child ">3</div>
+    <div class="child ">4</div>
+    <div class="child ">5</div>
+  </div>
+  <h3>Flex-Direction: row - Align-Items: align-end</h3>
+  <div class="parent row justify-center align-end">
+    <div class="child ">1</div>
+    <div class="child ">2</div>
+    <div class="child ">3</div>
+    <div class="child ">4</div>
+    <div class="child ">5</div>
+  </div>
+  <h3>Flex-Direction: row - Align-Items: align-stretch</h3>
+  <div class="parent row justify-center align-stretch">
+    <div class="child ">1</div>
+    <div class="child ">2</div>
+    <div class="child ">3</div>
+    <div class="child ">4</div>
+    <div class="child ">5</div>
+  </div>
+  <h3>Flex-Direction: row - Align-Items: align-baseline</h3>
+  <div class="parent row align-baseline justify-center">
+    <div class="child ">1</div>
+    <div class="child ">2</div>
+    <div class="child ">3</div>
+    <div class="child ">4</div>
+    <div class="child ">5</div>
+  </div>
+  
+  <!-- Row Align-Self --> 
+  
+  <!-- row Align Self-->
+  <h3>Flex Direction: row - Align-Self: flex-start </h3>
+  <div class="parent row justify-center  align-center">
+    <div class="child ">1</div>
+    <div class="child ">2</div>
+    <div class="child self-start">3</div>
+    <div class="child ">4</div>
+    <div class="child ">5</div>
+  </div>
+  <h3>Flex Direction: row - Align-Self: center </h3>
+  <div class="parent row justify-center align-baseline align-center">
+    <div class="child ">1</div>
+    <div class="child ">2</div>
+    <div class="child self-center">3</div>
+    <div class="child ">4</div>
+    <div class="child ">5</div>
+  </div>
+  <h3>Flex Direction: row - Align-Self: flex-end </h3>
+  <div class="parent row align-baseline justify-center align-center">
+    <div class="child ">1</div>
+    <div class="child ">2</div>
+    <div class="child self-end">3</div>
+    <div class="child ">4</div>
+    <div class="child ">5</div>
+  </div>
+  <h3>Flex Direction: row - Align-Self: stretch</h3>
+  <div class="parent row justify-center align-center">
+    <div class="child ">1</div>
+    <div class="child ">2</div>
+    <div class="child self-stretch">3</div>
+    <div class="child ">4</div>
+    <div class="child ">5</div>
+  </div>
+  <h3>Flex Direction: row - Align-Self: baseline</h3>
+  <div class="parent row justify-center align-stretch align-center">
+    <div class="child ">1</div>
+    <div class="child ">2</div>
+    <div class="child self-baseline">3</div>
+    <div class="child ">4</div>
+    <div class="child ">5</div>
+  </div>
+</main>
+</body>
+</html>
