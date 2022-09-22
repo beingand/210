@@ -1,0 +1,50 @@
+Very nice work, Lawrence. You've almost got it working. For minerals and vegetables, the layout breaks at certain widths.  See the attached screenshots.
+
+This might be  simply the result of a browser calculation error. I couldn't track down any mistake in your code that might have caused it. Your did a browser reset, and set box-sizing: border-box;
+_____________
+
+Your CSS breakpoints are off by one pixel. The changes should occur at 500 and 1000px, not 501 and 10001.
+____________
+
+Your media queries are a curious mix of min-width and max-width.  Keep them all min or all max. 
+
+It's best to first code all the "mobile" styling, at the top, without a media query around it.  then use a series of min-width breakpoints.  Like this:
+
+.animals section{
+  width: 100%;
+  float: left; 
+}
+
+at min-width: 500px put
+.animals section{
+  width: 50%;
+  [ you need not code the float: left again, it carries over ]
+}
+
+at min-width: 1000px put
+.animals section{
+  width: 25%;
+}
+_________________
+
+class names should reflect the content they hold
+you have a row class wrapped around 4 column classes. The "row" is sometimes a row and sometimes a column.  What is it always? The main content. The directions say:
+
+"Below the heading use a pair of main tags to hold the main content. Inside the main tags create four [4] sections."
+
+Rather than applying the row class to the main tag, apply a class that describes what the main tag holds: animals, vegetables, and minerals.
+_____________
+
+Curiously you used col-1, col-2, col-3 and col-4, even though they all get styled the same way.  You seem to recognize this when your CSS says look for a class that starts with "col" and style it.  Why add 1, 2, 3 and 4 after "col" if you're going to ignore it when you do the styling? 
+
+Class names should describe the content they hold.  The col-1, col-2, col-3 and col-4 classes you have applied are not columns. What are they? They are all sections.  
+
+You only need one class per HTML page: animals, minerals and veggies. Apply the appropriate class to the main tags, then use descendant selectors to target the section tags. Please study the solution code and watch the videos explaining how descendant selectors work. 
+___________
+
+Finally, the URL you submitted does not lead to the assignment. I couldn't find the assignment on MyDrive
+
+
+
+
+

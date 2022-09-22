@@ -1,0 +1,38 @@
+Here's the solution CSS: 
+
+main {
+  display: flex;
+  flex-direction: column;
+}
+
+.animals main{
+  background-color: lightskyblue;
+}
+
+.minerals main{
+  background-color: pink;
+}
+
+.vegetables main {
+  background-color: lightyellow;
+}
+
+@media (min-width: 750px){
+  main {
+    flex-direction: row;
+  }
+}
+
+---------------
+
+The key is identifying main as the flexbox, also known as the  flexbox container. The children of a flexbox are, by default, flex items. So the sections are the flex items.
+
+Flex items can have direction.  Their flex direction is set on main, the flexbox container, as follows: 
+
+At mobile size:
+
+main { flex-direction: column }
+
+At min-width:750px
+
+main { flex-direction: row }

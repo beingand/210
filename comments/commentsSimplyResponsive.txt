@@ -1,0 +1,229 @@
+simplyResponsive feedback:
+
+spaces in directory and file names:
+Your URL is incorrect.  Please take the space out of the ITD210 directory.  Don't use spaces in file and folder names, the browser can't deal with a URL with a space, and throws in a random character.
+
+Kyle,
+
+Excellent code.
+
+You don't need a class on every animal div.  Pull the class up to the outer div, which you gave a class of "row."  It's a row some of the time,  a column some of the time, and a 2 by 2 some of the time. A more meaningful class name would be animalContainer or animalHouse or ... 
+
+I'd use section tags around each of the 4 animals. Then style with  descendant selectors:
+
+.animalContainer section {
+{
+   float: left;
+   width: 25%;
+   etc
+
+}
+
+You certainly applied a lot of classes!  You had the right instinct, which was to create a "row" to put around... something.  But you've got two divs around each section (each animal, etc) which is one div too many.  You need a div, or tag, that will wrap around all four sections.  
+
+Take a look at the solution code.  The main tag wraps around all 4 sections, and enables them to act responsively together.  
+
+Suggestions for future assignments:
+
+1.  Get a good coding editor, like Brackets, and install the Beautify extension.  All free downloads.  Then enable Edit > Beautify on save.  Each time you save, your code gets lined up according to the Document Object Model (DOM).  That makes it much easier to see what tags are inside other tags, and the structure of your content is revealed.  It will also make it easier to spot missing ending tags.
+
+2.  Use the HTML validator!  Your code has quite a few validation errors.  It takes only a couple minutes to run it through the validator, which gives you instant feedback on how to fix your code. 
+
+Other than that, it just takes time, and patience, and hard work.  This was not an easy assignment, and you made a good effort!
+
+Please watch both videos which explain the solution.   Several times.  Proper application of classes and descendant selectors are the key to good coding.
+
+Judy
+
+Wow!  Awesome work, Chuong.
+
+ If you have looked at the solution code you no doubt realize you could have made do with only applying one class to each HTML page.  But you really honed in on the heart of the matter:  changing the widths of the sections from 100% to 50% to 25%, using media queries.
+
+A couple comments:
+
+1.  Your CSS is not "mobile first."  It's actually mobile last.  Start with styling on mobile, then use min-width media queries at each successive breakpoint. 
+
+2.  The minerals and vegetables pages were not supposed to change width.  You could have made your code simpler if you had realized this.  But the important thing is you were able to make each page do what it was supposed to do.
+
+3.  You've got some redundant CSS:
+
+.column {
+  float: left;
+  width: 25%;
+  padding: 20px;
+  border: 1px solid black;
+}
+
+.column_min {
+  float: left;
+  width: 25%;
+  padding: 20px;
+  border: 1px solid black;
+  background-color:pink;
+}
+
+.column_veg {
+  float: left;
+  width: 25%;
+  padding: 20px;
+  border: 1px solid black;
+  color:pink;
+  font-size: 150%;
+}
+
+Whenever you find yourself writing the same code more than once, ask yourself "how could I simplify this?"  The answer is usually by pulling out common property: value pairs and styling them together. 
+
+This would have been easy if you had used section tags around each of the four items on every page.  Like this:
+
+section {
+    padding: 20px;
+    border: 1px solid black;
+    etc
+}
+
+With the way you wrote the HTML, you could could do like this:
+
+.row  div {
+  padding: 20px;
+   etc for common properties
+}
+
+The above code catches every div which is inside the row class, and no others.   You could also use .row > div to only catch divs which are direct children of the row class.
+
+4.  One final comment: you've got what my teacher used to call "divitis."  Too many div tags.  Use the semantic HTML5 tags, like header, nav, main, footer, aside, section,  and your tags convey meaning.  
+
+Awesome work!
+
+Judy
+
+Thomas,
+
+Excellent work!  You've got the responsive behaviors all working. You have a few more classes applied a few more times than needed, but it's working!
+
+A few comments:
+
+1. Do you have Safari?  Here are a couple work arounds:
+https://discussions.apple.com/thread/6619528
+Or, you can download firefox. It is important that you be able to test your design at all screen widths.
+
+2. You have some redundant code:
+
+.column
+{
+    float:left;
+    width: 25%;
+    height: 600px;
+    padding: 20px;
+    border-style: solid;
+    
+}
+
+/* Create four equal columns that floats next to each other Minerals*/
+.columnmin
+{
+    float:left;
+    width: 25%;
+    height: 600px;
+    padding: 20px;
+    border-style: solid;
+    
+}
+
+/* Create four equal columns that floats next to each other Vegetables sheet*/
+.columnveg
+{
+    float:left;
+    width: 25%;
+    height: 600px;
+    padding: 20px;
+    border-style: solid;
+    
+}
+
+This redundancy could be elimated, making the code easier to write, read, and maintain:
+
+.column, .columnmin, .columnveg {
+   //styling here
+}
+
+3. CSS should be "mobile first," then use min-width: 500px and min-width: 1000px media queries. 
+
+4. The sections (what you call columns) on the mineral and vegetable pages should be width:100% at all viewport sizes.
+
+Keep up the great work!
+
+Judy
+
+Your use of different classes for animals, veggies and minerals was a good start, but then you  couldn't decide whether to use floats or flexbox, and have aspects of both in your code. Also, you have a breakpoint at 500px, but are missing the 1000px breakpoint.
+
+A few comments:
+1.  The menu looks very nice. 
+2.  The row class is what wraps around the four divs, on all three pages. You set that to width of 100%, and never change it.  That's fine, although div is a block level element and it's default width is 100%, so you did not need to code that. 
+3.  You set the row class to be a flex container, which is one way to approach this problem.  In fact, that is what you will be doing for the next assignment, which requires that you use flexbox to do a different responsive design. I think the readings for the next module will help you with that.  As you read, think about what flex-direction you want and how that direction would need to change at the specified breakpoint
+4.  Your column class, for the animals, is set to float: left; width:25%.  That would work fine if you had a min-width: 1000px media query. Then min-width: 500px should set the column class to width: 50%, to get two divs side by side. And width:100% for anything under 500px.
+5. Study the solution code, which shows how to set the proper breakpoints. We always start with "mobile first," meaning first code the CSS for how you want the layout to look on a mobile device.  Then start your breakpoints:  min-width: 500px, then min-width: 100px.
+6.  You got the background-color changing on the minerals page, and the font-size and color changing on the vegetables page.  Just needed one more breakpoint to make them both work by changing twice rather than once.
+
+Sometimes when I'm close to a solution but not seeing it, a good nights sleep will help.  Or getting my mind off it by gardening.  This was not an easy assignment, and the brain just needs some processing time to wrap itself around the code to visual leap. 
+
+You did a great job getting so close.  I'm sure you'll nail the next assignment, having thought about both float based layout and flexbox on this assignment.  Heck, you probably have it figured out already. 
+
+Awesome work!
+
+Judy
+
+Your use of different classes for animals, veggies and minerals was a good start, but then you  couldn't decide whether to use floats or flexbox, and have aspects of both in your code. Also, you have a breakpoint at 500px, but are missing the 1000px breakpoint.
+
+A few comments:
+1.  The menu looks very nice. 
+2.  The row class is what wraps around the four divs, on all three pages. You set that to width of 100%, and never change it.  That's fine, although div is a block level element and it's default width is 100%, so you did not need to code that. 
+3.  You set the row class to be a flex container, which is one way to approach this problem.  In fact, that is what you will be doing for the next assignment, which requires that you use flexbox to do a different responsive design. I think the readings for the next module will help you with that.  As you read, think about what flex-direction you want and how that direction would need to change at the specified breakpoint
+4.  Your column class, for the animals, is set to float: left; width:25%.  That would work fine if you had a min-width: 1000px media query. Then min-width: 500px should set the column class to width: 50%, to get two divs side by side. And width:100% for anything under 500px.
+5. Study the solution code, which shows how to set the proper breakpoints. We always start with "mobile first," meaning first code the CSS for how you want the layout to look on a mobile device.  Then start your breakpoints:  min-width: 500px, then min-width: 100px.
+6.  You got the background-color changing on the minerals page, and the font-size and color changing on the vegetables page.  Just needed one more breakpoint to make them both work by changing twice rather than once.
+
+Sometimes when I'm close to a solution but not seeing it, a good nights sleep will help.  Or getting my mind off it by gardening.  This was not an easy assignment, and the brain just needs some processing time to wrap itself around the code to visual leap. 
+
+You did a great job getting so close.  I'm sure you'll nail the next assignment, having thought about both float based layout and flexbox on this assignment.  Heck, you probably have it figured out already. 
+
+Awesome work!
+
+Judy
+
+Hi Melinda,
+
+I'm so sorry you've been in the hospital all week.  I hope you are on the road to recovery.
+
+I drop the two lowest assignment grades, to account for illness, hospital visits, accidents, power outages, and work and family conflicts.   Please don't worry about not being able to focus on this assignment. It was a tough one, and when you're not feeling well it's impossible to focus on anything.  
+
+If you find that your health concerns continue to be overwhelming, let me know and I'll contact NOVA online to see what we can do to accommodate your needs.  Your health clearly takes priority. 
+
+Regarding your submission:  it's tough to write code without a validator, and you've made a good effort at getting things started.  The animals.html page actually looks great.  You've got four sections with a div class="main" going  around them.   The minerals and vegetables page took a different approach,  with the main  divs going around each section. Not sure you were aware of this, because the indentation  didn't line up the opening and closing divs.  
+
+I suggest you download a good coding text editor, like Brackets, and install the Beautify extension.  Then set Edit > Beautify on save.  That will force your code to line up with the DOM each time you save, which makes the structure of the document easier to see.
+
+On the CSS, you clearly knew that changing widths, colors, etc were needed, and that media queries were involved.  But your coding syntax was off.  Media queries get wrapped around one or more CSS selectors (tags, classes, or ids) and their property:value pairs that do the styling. So one set of braces for the media query, and another set of braces after the selector to enclose the property: value pairs.
+
+Considering you were in the hospital,  I'm amazed you got as much done as you did.  This was a tough assignment and you were headed in the right direction.
+
+Please take care of yourself,
+
+Judy
+--------------------
+Jason,
+
+Excellent work on your simply responsive assignment.  You've got all the code you need, and a little bit that you don't need.
+
+Comments:
+
+1. Not sure why you set the html and body tags to have height and width of 100%. 
+
+2. Responsive design always begins with "mobile first."  You seem to recognize this, but use a media query you don't need. Simply start with no media query, and specify how you would like the page to look on a mobile device.  No need for the media query max-width: 500px. (Which should be 499px, because at 500px you want to change things up.)  The first media query should be min-width: 500px.  Then, min-width: 1000px.
+
+3. Your CSS specifies the mineralcolumn class should float: left with a width: 100%.  No need for this: that's the default behavior of block level elements like div, main, and section.  And, because you want the mineralcolumn class sections to stay 100%, you clearly to not need to say that again after each subsequent media query.  If the media queries are ordered correct, from mobile to min-width:whatever in increasing min-widths, all you need to specify is what property:values have changed at the new breakpoint.  Ditto for the veggiecolumn queries.
+
+Awesome work!
+
+Judy
+
+

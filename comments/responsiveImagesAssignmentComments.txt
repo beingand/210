@@ -1,0 +1,21 @@
+Comments responsive images assignment
+
+Image file names:
+
+Name your image files something that reflects what the image shows.  Bad file names: 100024.jpg,  animal1432.jpg,  furryLittleBunny_animals_friendly.png.   Good file names:  tiger.jpg, twoLions.jpg,  bunny.png
+
+Image file size and height and width attribute:
+
+ Do not use height and width attributes inside the img tag.  They are not needed with responsive images.  Always resize and/or crop the image to the size you want the viewer to see on the largest devices. No larger.
+
+ Some  of you uploaded huge image files to the server, then made them smaller using the height and width attributes of the img tag.  This is never a good idea.  You're making the user download a big file and then showing them a small file.  You've slowed down your site and wasted their bandwidth.
+
+ Different image files for different size devices:
+
+ The srcset and sizes attributes of the image tag allow you to specify different image source files depending upon the width of the user's device. This is explained briefly in the Frain book at pages 73-74.  Here's a detailed explanation: https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images
+
+
+
+
+
+

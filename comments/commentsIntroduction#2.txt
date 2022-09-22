@@ -1,0 +1,64 @@
+Emmanuel,
+
+A solid job on the introduction assignment. I enjoyed learning a bit about you.
+
+-20  you are missing two pages: goals.html and humor.html
+-10  your html code does not validate. see comments below.
+
+A few comments about your code:
+
+1. broken images on about.html and experience.html pages
+2. missing directories: images, css, screenshots
+3. the code <li style="About Me"> makes no sense.  Ditto for the li style code on the other html pages. When you use a style attribute on a tag, the style information should come in property:value pairs.  For example: <li style="color:red">
+4. you have styled the div tag, so every div will have a background-color: orange; float:right.  div is a generic tag, used to divide your code into divisions, or blocks of code. Never style div itself.  Instead, style the class or id which is associated with the div.  
+For example, in the HTML file you might have:
+
+<div class="authorInfo">
+  <h3>Info About the Author</h3>
+  <p>info blah blah</p>
+  <p>more info blah blah</p>
+</div>
+
+Then, in the CSS you would style that chunk of div like this:
+
+.authorInfo {
+  text-align: left;
+  border-style: inset;
+}
+
+The above CSS creates a class named authorInfo.  Notice in the CSS the class name has a dot in front of it.  That tells the browser that authorInfo is the name of a class.
+
+5. you have styled the img tag, so every image on your website will have height: 297px; width: 400px. Don't put styles like height, width, float in the CSS styling for an img tag.  You don't want all of your images to be the same height and width.  And you may  want them to float different ways. Instead, create a class and apply styling to that class.  For example, in the CSS:
+
+.headerImg {
+  float: left;
+  margin: 5px, 5px, 5px, 0px;
+ }
+ 
+ Then, in the HTML:
+ 
+ <img class="headerImg" src="goldenRetriever.jpg" alt="Cute Golden Retriever">
+ 
+ 6.  In your CSS you create an id named logo, but never apply it in the HTML
+ 7.  In your HTML code you apply an id named "Search", but the id is not styled in the CSS. The only other reason to apply an id is so that you can attach javascript to it; you have not done that.
+ 8.  Your HTML has many validation errors. Use the validator, it will tell you what is wrong with your code.  Study:
+ 
+ https://www.nvcc.edu/home/jumiller/html_tutorial/validation.html
+ 
+ Here are some of the validation errors:
+ a.  should only be one html tag
+ b.  form tag not closed
+ c. <li style="About"> invalid.  see #3 above
+ d. img tag has obsolete attribute, align. 
+ wrong:  <img src="whatever.jpg" alt="whatever" align="left">
+ right:  <img src="whatever.jpg" alt="whatever" style="float:left">
+ also right:  <img src="whatever.jpg" alt="whatever" class="floatLeft">
+ then in the CSS:
+ .floatLeft {
+   float: left;
+  }
+  
+ e. no spaces allowed in file names. 
+ wrong: <img src="me in sand.jpg" alt="Me in Sand">
+ right: <img src="meInSand.jpg" alt="Me in Sand">
+ and of course the image file name has to match the code src value.

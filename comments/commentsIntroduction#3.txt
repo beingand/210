@@ -1,0 +1,25 @@
+Great work on your Introduction assignment, Nisha. I was glad to learn a bit about you.
+Both your HTML and CSS code are excellent. You have a very good understand of how to style tags, and how to create and apply ids.
+A few comments:
+1.  For the navigation you use an unordered list and apply a class of "nav". HTML5 has some new tags that were created to replace some old  common structural classes that were being applied to divs. These newer tags include nav, header, main, footer and a few more.  So you can wrap a pair of nav tags around the unordered list, then any place you use .nav in the CSS, you would instead use nav, referring to the tag rather than a class. These new HTML5 tags are sometimes referred to as semantic tags.  They convey meaning, unlike the generic div tag.
+2.  You nicely use the footer tag around your footer. No need to place a div with a class of footer around the footer tags. just style the footer tag.
+3.  #centeredDiv id sets a width of 440px and auto margins right and left to center. It works fine. Try to make your id and class names semantic, so they describe what they are being applied to. In your case, the centeredDiv id appears to contain the main content for each page.  So a more descriptive name for this id would be #mainContent or even just #main. In fact, there is an HTML5 tag main which is typically used around the main content, so you don't even need an id.  Just use and style the main tag.
+4.  your #centeredDiv class has a width of 440px, but your p styling sets a width of 600px.  You've got p tags inside #centeredDiv. Which  do you want it to be, 440px or 600px?  The code is inconsistent.
+5.  .mypicclass sets width: 450px; height: 300px;  that's an aspect ratio of 3:2.  You apply the .mypicclass class to every image.  Two things wrong with this:
+a)  the picture of yourself, mypic2.jpg, is an image file with width:6000; height:4000.  The aspect ratio of the original image is 3:2, so you have not distorted the image by displaying it at 450x300.  But you're making the user download a huge file, just to display the image at less than one-tenth its actual size.  If they have a mobile data plan you've just wasted them money, plus made the download take a lot longer. Bad idea.
+b)  the picture of the koala bear has an image file size of 891x517. That's about 3.44:2.  By displaying it at 450x300, 3:2, you are  distorting the image.
+6. don't use the word class in the name of a class.  .mypicclass should just be .mypic
+7. most websites do not have every image the exact same size.  if you do want this, use photoshop's crop tool,  setting the desired aspect ratio in photoshop before you crop, so you see exactly which portion of the image will give you the correct aspect ratio.  Then resize if needed. (Be sure the original image is large enough; you never want to resize an image to make it larger, unless it's a vector graphic, in which case you probably shouldn't be messing with the aspect ratio.)
+8. You create a class named .footerText, which you apply to every p in the footer.  This is a perfect place to use descendant selectors. First, remove the class from the HTML.  Then, in your CSS, rather than style the .footerText class, style like this:
+footer p {
+  property:value;
+  property:value;
+}
+The above CSS says: for every p tag which is INSIDE a footer tag, set the styling as specified.
+If you are using a class named footer, the CSS would go like this:
+.footer p {
+  etc...
+Use descendant selectors whenever possible. The advantage is you need not mark up the HTML with  a class or an id. Combined with  the use of the new HTML5 semantic tags, the CSS code is very meaningful.
+Excellent work, Nisha.  Looking forward to having you in the class.
+Judy
+  

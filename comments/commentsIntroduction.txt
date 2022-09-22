@@ -1,0 +1,50 @@
+Hi All, 
+
+We have an amazing group of students in this class.  Please take the  time to get to know each other by viewing the websites you have created for the first assignment. Links to those sites may be found at:
+
+https://www.nvcc.edu/home/jumiller/210students.html
+
+[login using your MyNova username and password]
+
+You all have very different backgrounds, and your prior experience with web development may not be as extensive as another student. Don't worry if your site doesn't look as polished as some of the others.  We all are here to learn and grow. 
+
+Some general comments:
+
+1)  A few of you are making up your own directory and file names. Please stick to the assignment requirements.  Remember, servers are case sensitive, and directory and filenames should never include spaces. 
+
+2)  A few of you are not validating your code.  Use the validators!  Don't wait for me to tell you your code is incorrect, and take off points.  The validator will tell you, and you can correct your own code. Please review https://www.nvcc.edu/home/jumiller/html_tutorial/validation.html
+
+3)  I received a couple of URLs that don't work.  They lead to "file not found." If your home page is about.html, you will need to include that in the URL.  Test your URL in the browser before you paste it into the assignment submission comment section. If you can't see your site using the URL, then I can't see your site using the URL.   URLs always start with http:// or https://.  If your "URL" starts with file// or c://, you're giving me a PATH to a file on your local hard drive.  I can't see what is on your local hard drive. 
+
+4)  Test out your sites on the server before you submit the URL. If the links are not working, it is probably a pathing issue.  Review https://www.nvcc.edu/home/jumiller/html_tutorial/linking.html  If the images don't show, either the image file is corrupt or it's a pathing issue. Review  https://www.nvcc.edu/home/jumiller/html_tutorial/images.html
+
+5) You should have all your styling in one CSS file, which is linked to from each HTML page.  The assignment required that you demonstrate that you are able to style tag selectors, create and apply classes appropriately, and create and apply ids appropriately. If this is still a challenge for you, don't worry.  Please review: https://www.nvcc.edu/home/jumiller/html_tutorial/styling.html
+
+6)  If the assignment required something that you did not learn how to do in ITD 110, please send me an email and let me know when and from whom you took ITD 110.  
+
+If you haven't received your grade yet, hang tight, you'll get it soon.
+
+Judy
+
+
+
+
+1.  The opening html tag should have a language attribute.  So add:  lang="en"
+
+2.  Some of your images are huge files, but you are showing the user tiny images. For example, the image named bridegroom-business-businessman-8115.jpg is 4404 px wide and 3303 pixels high.  That's big!  But you HTML code says to display it at 200 x 115. You are making the user download a huge file, just to show them a tiny image.  Instead, crop the image so it already is the size at which you want it to be displayed. [In the class we will show how to make images display responsively, depending upon the width of the browser.]
+
+3.  Your image names are just weird, and have random numbers which do nothing but cause coding errors. Instead of bridegroom-business-businessman-8115.jpg, how about dancingFeet.jpg.
+
+4.  You've got a class named .small-text.  Class names should describe that to which they are being applied, not what styling they do.  So rather than .small-text, a class name like .footerInfo would be more descriptive. That way, if  you decide you want to make the text a medium size, the name of the class still makes sense.
+
+5.  Use descendant selectors to style, rather than classes, where you can.  For example, you apply the .small-text class to the paragraph in the footer on every page.  So you can remove the class name from the p tag, and keep the HTML markup clean, by doing the styling like this:
+footer p {
+  text-align: center;
+  font-size: 12px;
+}
+The above CSS says:  for every p element you find inside a footer element, apply the specified styling.
+
+I'm looking forward to having you in the class!
+
+Judy
+

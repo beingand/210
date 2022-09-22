@@ -1,0 +1,12 @@
+With multi-column layout, the number of columns should change as the browser is resized, and the  text should adjust and fill each of the columns.  For example at mobile size the text  would display as  one long column, at tablet portrait size the text will display in two two columns, and at tablet landscape size the text will display in three columns.  I've posted a link to an example in the Overview section of the CSS module: 
+
+https://www.nvcc.edu/home/jumiller/210/examples/multiColumnLayout/index.html
+
+In order for the @font-face rule to work, you need to 1) tell the browser where to find the font-family and 2) say which element (tag or class) you want to apply that font-family to.
+For example:
+In head of HTML file: 
+    <link href="https://fonts.googleapis.com/css?family=Cormorant" rel="stylesheet">In the CSS file:
+ p {
+	font-family: Cormorant;
+}
+
