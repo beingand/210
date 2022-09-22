@@ -1,0 +1,38 @@
+/* flex.css */
+
+/* This is the only file you may make changes to for the flexbox assignment */
+/*  Do not DELETE anything in this .css file */
+/*  ADD to this .css file what you need to make the flexbox assignment work.*/
+/*  You must use FLEXBOX */
+
+/*  PUT YOUR FULL NAME HERE */
+
+* {
+    box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    text-align: center;
+}
+
+section {
+    border: inset #333 thin;
+    padding: 1em;
+    /* no more code for the section tag */
+    /* flexbox items have no floats and no widths */
+}
+
+/*  You must add some CSS here */
+
+
+
+@media (min-width: 750px) {
+    /* add some CSS here */
+
+
+}
