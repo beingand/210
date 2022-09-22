@@ -1,0 +1,19 @@
+
+*{
+	margin: 0;
+	padding: 0;
+}
+
+.parent {
+	background-color: lightblue;
+	color: #ebebeb;
+	font-size: 2em;
+	height: 500px;
+	display: flex;
+	flex-direction: column;
+	}
+
+p{
+	border: inset;
+	padding: 0.5em;
+}

@@ -1,0 +1,9 @@
+main {
+	column-gap: 2em;
+	column-rule: thin dotted #999;
+	column-width: 12em;
+}
+
+p {
+	margin: 0;
+}

@@ -1,0 +1,52 @@
+body {
+  background: #aaa;
+}
+
+h2,p {
+	text-align: center;
+	font-family: "Courier New", Courier;
+	margin-top: 2.0em;
+}
+#outer {
+  margin-top:  3.0em;
+  background: #444;
+  /* display: flex on outer allows inner to be centered */
+  display: flex; /* flex-direction: row is the default, but it doesn't really matter because inner is the only child.*/
+  align-items: center;
+  justify-content: center;
+  /* overflow: auto; on the OUTER div appears to be required to make the horizontal scrolling work 
+	both inner and outer divs seems to be required to make this work
+	see https://stackoverflow.com/questions/21515042/scrolling-a-flexbox-with-overflowing-content
+  */
+  overflow: auto;
+  border: solid red;
+  -webkit-overflow-scrolling: touch; /* Lets it scroll lazy on iphone*/
+}
+
+
+#inner {
+  margin:  2.5em auto 2.5em auto;
+  display: flex;
+  align-items: center; 
+  justify-content: center;
+  /* flex-wrap: nowrap; default */
+  /* flex-direction: row; default */
+  border: solid blue;
+}
+
+.box {
+  width: 75px;
+  height: 75px;
+}
+
+.box:nth-child(3n-2) {
+  background-color: #EF5350;
+}
+
+.box:nth-child(3n-1) {
+  background-color: #2E7D32;
+}
+
+.box:nth-child(3n) {
+  background-color: #03A9F4;
+}
