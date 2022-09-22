@@ -1,0 +1,38 @@
+* {
+	box-sizing: border-box;
+}
+h1, h2, h3, h4, h5, h6 {
+	text-align: center;
+}
+section {
+	border: inset #333 thin;
+	padding: 1em;
+	float: left;
+	width: 100%;
+}
+
+@media (min-width: 500px) {
+	.animals section {
+		width: 50%;
+	}
+	.minerals section {
+		background-color: lightskyblue;
+	}
+	.vegetables section {
+		font-size: 1.2em;
+		color: hotpink;
+	}
+}
+
+@media (min-width: 1000px) {
+	.animals section {
+		width: 25%;
+	}
+	.minerals section {
+		background-color: pink;
+	}
+	.vegetables section {
+		font-size: 1.4em;
+		color: royalblue;
+	}
+}
